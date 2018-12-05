@@ -72,7 +72,35 @@ class ImgFigure extends React.Component{
     )
   }
 }
+class ControllerUnit extends React.Component {
+  handleClick(e){
+    // 如果点击的是当前正在选中态的按钮，则翻转图片，否则将对应的图片居中
+    if (this.props.arrange.isCenter) {
+      this.props.inverse();
+    } else {
+      this.props.center();
+    }
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  render(){
+    var controlelrUnitClassName = "controller-unit";
 
+    // 如果对应的是居中的图片，显示控制按钮的居中态
+    if (this.props.arrange.isCenter) {
+      controlelrUnitClassName += " is-center";
+
+      // 如果同时对应的是翻转图片， 显示控制按钮的翻转态
+      if (this.props.arrange.isInverse) {
+        controlelrUnitClassName += " is-inverse";
+      }
+    }
+
+    return (
+      <span className={controlelrUnitClassName} onClick={this.handleClick.bind(this)}></span>
+    );
+  }
+}
 class AppComponent extends React.Component {
   constructor(){
     super()
@@ -157,8 +185,7 @@ class AppComponent extends React.Component {
       vPosRangeTopY = vPosRange.topY,
       vPosRangeX = vPosRange.x,
       imgsArrangeTopArr = [],
-      topImgNum = Math.ceil(Math.random() * 2),
-      //  取一个或不取
+      topImgNum = Math.floor(Math.random() * 2),//  取一个或不取
       topImgSpliceIndex = 0,
       imgsArrangeCenterArr = imgsArrangeArr.splice(centerIndex,1);
     //首先居中 centerIndex 的图片,居中的 centerIndex 的图片不需要旋转
@@ -249,7 +276,8 @@ class AppComponent extends React.Component {
       }
       ImgFigures.push(<ImgFigure data={value} ref={'imgFigure'+index}
        arrange={this.state.imgsArrangeArr[index]} inverse={this.inverse(index)} center={this.center(index)}></ImgFigure>)
-
+      controllerUnits.push(<ControllerUnit arrange={this.state.imgsArrangeArr[index]}
+       inverse={this.inverse(index)} center={this.center(index)}/>);
     });
     // imageDatas.forEach(function () {
     // }.bind(this))
