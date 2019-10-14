@@ -1,0 +1,81 @@
+{
+    "REGISTRATION": {
+        "PAGE_TITLE": "CrossLab Connect",
+        "ALREADYACCOUNT": "Already have an account? ",
+        "SIGNIN": "Sign In",
+        "FIRSTNAME": "First Name",
+        "LASTNAME": "Last Name",
+        "EMAILADDRESS": "Email (Required)",
+        "PHONENUMBER": "Phone Number",
+        "COMPANY": "Company (Required)",
+        "COUNTRY": "Country (Required)",
+        "AGREE": "I agree to Agilent's ",
+        "TERMS": "Terms of User",
+        "INFO":"For full details of how we will treat your information view our ",
+        "POLICY":"privacy policy",
+        "CREATACCOUNT": "Create Account",
+        "PHONE_ERROR": "Please enter a valid phone number",
+        "VALIDATION_COMPANYEMAIL":"Company Email is required",
+        "FIELD_REQUIRED_VALIDATION_2":"Please enter a valid email",
+        "DESCRIPTIONONE": "Agilent and the institutions who use Agilent's CrossLab products ('the services') collect personal data from you in order to create a user account and to register you as an authorized user of the services provided by Agilent and the company.",
+        "DESCRIPTIONTWO": "When you register for an account on the Integrated Service Experience platform, you will also automativally be registered for an Agilent.com account in order to access this product. Automatic registration with the product and Agilent.com will allow users to view private agreements (e.g.,service contracts) and other personalized content on Agilent.com.",
+        "DESCRIPTIONTHREE": "To create an account, you must provide your email address(es) and country, as well as your name, phone number and billing address, if required.",
+        "DESCRIPTIONFOUR": "We will also collect and store details of your usage by collecting log files.",
+        "DESCRIPTIONFIVE": "agilent collects this personal data for the legitimate purpose of enabling the service and will share your data with the company whose data you access.",
+        "DESCRIPTIONSIX": "For further details on how we treat your personal data and how you can exprcise your privacy rights please view our privacy policy:https://www.agilent.com/home/privacy-policy."
+    },
+    "REGISTRATION_FAILED":{
+        "FAILED_TITLE":"Registration Not Successful",
+        "ISSUE":"There has been an issue with your registration.",
+        "CONTACT":"Please contact",
+        "ISE_EMAIL":"ISE-Suppor@mailing.agilent.com",
+        "THANK":"Thank you for your patience,",
+        "TEAM":"Your Agilent Team",
+        "EMAIL_TITLE":"Existing Email",
+        "EMAIL_INFO":"This email is associated with an existing Agilent account:",
+        "USER_EMAIL":"email.name@agilent.com",
+        "FORGOT_PASSWORD":"Forgot Password?",
+        "SIGN_IN":"Sign In"
+    },
+    "ACTIVATION_EXPIRED":{
+        "ALREADYACCOUNT": "Already have an account? ",
+        "SIGNIN": "Sign In",
+        "ACTIVATION_TITLE":"Activation Expired",
+        "EXPIRED_INFO":"Your activation period has expired",
+        "ACTIVATION_INFO":"Please click Resend Email button to recieve another email with yur login information.",
+        "EXPIRED_TIME":"Please note that this link will expire in 7 days.",
+        "RESEND_EMAIL":"Resend Email"
+    },
+    "CONFIRM_ACCOUNT":{
+        "PAGE_TITLE": "CrossLab Connect",
+        "ALREADYACCOUNT": "Already have an account? ",
+        "SIGNIN": "Sign In",
+        "THANK":"Thank You",
+        "SET_ACCOUNT":"We are working to set up your account",
+        "VERIFY_ACCOUNT":"Please expect an email within the next 15 minuites to verify your account",
+        "WELCOME":"Thank you again for registering, and welcome to CrossLab!",
+        "VISIT_AGILENT":"Visit Agilent.com",
+        "RESEND_EMAIL":"Resend Verification Email"
+    },
+    "CREATE_PASSWORD":{
+        "PAGE_TITLE": "CrossLab Connect",
+        "CREATE_TITLE": "Create a Password",
+        "EMAIL_ADDRESS": "Email@address.com",
+        "NEW_PASSWORD":"New Password",
+        "PASSWORD_RULE":"Password must include at least 8 characters and 1 number",
+        "PASSWORD_LONG":"Password too long",
+        "PASSWORD_MATCH":"Password de not match",
+        "RWTYPE_PASSWORD":"Retype Password",
+        "CREATE_PASSWORD":"Create Password"
+    },
+    "RESET_PASSWORD":{
+        "PAGE_TITLE": "CrossLab Connect",
+        "FORGET_TITLE": "CrossLab Connect",
+        "RESET": "Reset Password",
+        "ENTER_INFO":"Please enter a new password. this will be your password to use next time you sign in.",
+        "NEW_PASSWORD":"New Password",
+        "PASSWORD_RULE":"Password must include at least 8 characters and 1 number",
+        "RWTYPE_PASSWORD":"Retype Password",
+        "SUBMIT":"Submit"
+    }
+}

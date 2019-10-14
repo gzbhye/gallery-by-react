@@ -1,0 +1,7 @@
+{
+    "REGISTRATION": {
+        "FIRSTNAME":"First Name",
+        "VALIDATION_COMPANYEMAIL":"Company Email is required",
+        "FIELD_REQUIRED_VALIDATION_2":"Please enter a valid email"
+    }
+}

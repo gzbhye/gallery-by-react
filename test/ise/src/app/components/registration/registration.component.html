@@ -1,0 +1,93 @@
+<div class="container agt-container ret-container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6">
+                <img class="agilent-logo" src="../../../assets/images/header_agilent_logo.png" alt="Agilent Technologies">
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <div class="form-container">
+                <div class="title-bg-color">
+                    <p>{{'REGISTRATION.ALREADYACCOUNT' | translate}}
+                        <a class="sing-in-link" href="javascript:void(0)" [routerLink]="['/login']">
+                            <span>{{'REGISTRATION.SIGNIN' | translate}}</span>
+                        </a>
+                    </p>
+                </div>
+                <form [formGroup]="formModel" action="" class="r-form">
+                    <div class="mb-4">
+                        <label class="control-label" for="firstName">{{'REGISTRATION.FIRSTNAME' | translate}}</label>
+                        <input class="form-control" type="text"
+                            formControlName="FirstName" id="firstName">
+                    </div>
+                    <div class="mb-4">
+                        <label class="control-label" for="LastName">{{'REGISTRATION.LASTNAME' | translate}}</label>
+                        <input class="form-control" type="text"
+                            formControlName="LastName" id="lastName">
+                    </div>
+                    <div class="mb-4">
+                        <label class="control-label" for="LastName">{{'REGISTRATION.EMAILADDRESS' | translate}}</label>
+                        <input class="form-control"
+                            pattern='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
+                            type="email" formControlName="EmailAddress" id="email" required>
+                        <p class="form-error-msg"
+                            *ngIf="fieldData('EmailAddress').errors?.required && fieldData('EmailAddress').touched"
+                            [translate]="'REGISTRATION.VALIDATION_COMPANYEMAIL'"></p>
+                        <p class="form-error-msg"
+                            *ngIf="fieldData('EmailAddress').errors?.pattern && !fieldData('EmailAddress').errors?.required"
+                            [translate]="'REGISTRATION.FIELD_REQUIRED_VALIDATION_2'">
+                            Please enter a valid email
+                        </p>
+                    </div>
+                    <div class="mb-4">
+                        <label class="control-label" for="LastName">{{'REGISTRATION.PHONENUMBER' | translate}}</label>
+                        <input class="form-control" type="tel"
+                            formControlName="PhoneNumbe">
+                    </div>
+                    <div class="mb-4">
+                        <label class="control-label" for="LastName">{{'REGISTRATION.COMPANY' | translate}}</label>
+                        <input class="form-control" type="text"
+                            formControlName="CompanyName" required>
+                        <p *ngIf="fieldData('CompanyName').invalid && (fieldData('CompanyName').dirty || fieldData('CompanyName').touched)"
+                            class="form-error-msg">
+                            Company Name is required
+                        </p>
+                    </div>
+                    <div class="mb-4">
+                        <span class="select-dropdown"></span>
+                        <label class="control-label" for="country">{{'REGISTRATION.COUNTRY' | translate}}</label>
+                        <select class="select-control" id="country" formControlName="CountryName" required>
+                            <option value="{{'REGISTRATION.COUNTRY' | translate}}" disabled selected
+                                style='display:none;'>{{'REGISTRATION.COUNTRY' | translate}}</option>
+                            <option *ngFor="let item of countryList" [ngValue]="item.countryName">
+                                {{ item.countryName }}</option>
+                        </select>
+                        <p *ngIf="fieldData('CountryName').invalid && (fieldData('CountryName').dirty || fieldData('CountryName').touched)"
+                            class="form-error-msg">
+                            Country Name is required.
+                        </p>
+                    </div>
+                    <div class="mb-4">
+                        <label for="checkConfirm">
+                            <input class="checkboxStyle" type="checkbox" name="checkConfirm" id="checkConfirm">
+                            <span class="icon-checkbox"></span>
+                            <span class="radioText">{{'REGISTRATION.AGREE' | translate}}<a class="sing-in-link"
+                                    href="javascript:void(0)">{{'REGISTRATION.TERMS' | translate}}</a></span>
+                            <p class="ise-privacy">{{'REGISTRATION.INFO' | translate}}<a href="javascript:void(0)" class="sing-in-link">{{'REGISTRATION.POLICY' | translate}}</a>.
+                            </p>
+                        </label>
+                    </div>
+                    <button class="btn agt-btn" type="submit"
+                        (click)="onSubmit()">{{'REGISTRATION.CREATACCOUNT' | translate}}</button>
+                </form>
+            </div>
+            <!-- <div class="agt-ret-desc">
+                <p>{{'REGISTRATION.DESCRIPTIONONE' | translate}}</p>
+                <p>{{'REGISTRATION.DESCRIPTIONTWO' | translate}}</p>
+                <p>{{'REGISTRATION.DESCRIPTIONTHREE' | translate}}</p>
+                <p>{{'REGISTRATION.DESCRIPTIONFOUR' | translate}}</p>
+                <p>{{'REGISTRATION.DESCRIPTIONFIVE' | translate}}</p>
+                <p>{{'REGISTRATION.DESCRIPTIONSIX' | translate}}</p>
+            </div> -->
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

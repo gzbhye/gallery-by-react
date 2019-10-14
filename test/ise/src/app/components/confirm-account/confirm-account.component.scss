@@ -1,0 +1,36 @@
+.account-des {
+  padding: 0 100px;
+  p {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #000000;
+    font-size: 14px;
+  }
+  h2 {
+    margin: 40px 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 29px;
+    line-height: 39px;
+    color: #0085d5;
+  }
+  .resend-email {
+    display: block;
+    margin: 30px 0 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #0085d5;
+  }
+  .agt-btn{
+    margin-top: 37px;
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 576px) {
+  .account-des {
+    padding: 0 16px;
+  }
+  .confirm-account {
+    margin-bottom: 30px;
+  }
+}
